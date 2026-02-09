@@ -130,6 +130,34 @@ function initApp(){
   const $ = id => document.getElementById(id);
   const RENDER_SCALE = 2.5;
 
+  function getFileNameParts(file) {
+    const fullName = (typeof file === "string") ? file : (file?.name || "document");
+    const lastDot = fullName.lastIndexOf(".");
+    if (lastDot <= 0) return { base: fullName, ext: "" };
+    const base = fullName.slice(0, lastDot);
+    const ext  = fullName.slice(lastDot + 1);
+    return { base, ext };
+  }
+  function ensureSuffix(base, suffix) {
+    if (base.toLowerCase().endsWith(suffix.toLowerCase())) return base;
+    return base + suffix;
+  }
+  function extensionFromMime(mime, fallback="png") {
+    if (!mime) return fallback;
+    const m = mime.toLowerCase();
+    if (m === "image/png") return "png";
+    if (m === "image/jpeg" || m === "image/jpg") return "jpg";
+    if (m === "application/pdf") return "pdf";
+    return fallback;
+  }
+  function buildOutputNameFromInput(file, forcedExt) {
+    const { base } = getFileNameParts(file);
+    const finalBase = ensureSuffix(base, "_filigrane");
+    const ext = forcedExt || extensionFromMime(file.type);
+    return `${finalBase}.${ext}`;
+  }
+  // --- fin utilitaires ---
+
   function drawWatermark(ctx,W,H,text,fontPx,subText,subFontPx,subEnabled,angle,opacity,color,clear=false){
     if(clear) ctx.clearRect(0,0,W,H);
     ctx.save();
@@ -266,8 +294,8 @@ function initApp(){
           +$("wmRot").value*Math.PI/180, +$("wmOpacity").value, $("wmColor").value, false
         );
         const a = document.createElement("a");
-        a.href = c.toDataURL(file.type);
-        a.download = "IMAGE_FILIGRANEE.png";
+        a.href = c.toDataURL(file.type || "image/png");
+        a.download = buildOutputNameFromInput(file);
         a.click();
         $("status").textContent = "✅ Image filigranée";
         $("bar").style.width = "100%";
@@ -310,7 +338,7 @@ function initApp(){
     const final = await out.save();
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([final],{type:"application/pdf"}));
-    a.download = "PDF_FILIGRANE.pdf";
+    a.download = buildOutputNameFromInput(file, "pdf");
     a.click();
     $("status").textContent = "✅ PDF filigrané";
   };
