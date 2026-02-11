@@ -98,8 +98,8 @@ Aucune installation nécessaire.
 
 
 ## 📄 Licence
-Ce projet est distribué sous licence **GNU General Public License v3.0**.  
-Voir le fichier `LICENSE` pour les détails.
+Licence libre, sans aucune garantie : GNU General Public License v3.0
+À adapter selon les contraintes légales ou organisationnelles.
 
 ## ✍️ Auteur
 Outil conçu pour un usage professionnel de protection et de traçabilité documentaire.
