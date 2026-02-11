@@ -4,7 +4,8 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 ![Single-file](https://img.shields.io/badge/Single--File-Offline%20App-blue)
 ![Filigrane](https://img.shields.io/badge/Filigrane-Inaltérable-red)
-[![Licence GPLv3](https://img.shields.io/badge/Licence-GNU%20GPLv3-blue)](LICENSE)
+[![Licence GPLv3](https://img.shields.io/badge/Licence-GPLv3-yellow)](LICENSE)
+![MadeInFrance](https://img.shields.io/badge/Made_in-🟦⬜🟥-ffffff)
 
 Outil **100 % côté client** (HTML + JavaScript) permettant d’ajouter un **filigrane inaltérable** sur des **PDF** et des **images (PNG / JPEG)**, avec aperçu en temps réel.  
 Aucune donnée n’est envoyée sur un serveur.
@@ -97,8 +98,8 @@ Aucune installation nécessaire.
 
 
 ## 📄 Licence
-Licence libre, sans aucune garantie : GNU General Public License v3.0
-À adapter selon les contraintes légales ou organisationnelles.
+Ce projet est distribué sous licence **GNU General Public License v3.0**.  
+Voir le fichier `LICENSE` pour les détails.
 
 ## ✍️ Auteur
 Outil conçu pour un usage professionnel de protection et de traçabilité documentaire.
