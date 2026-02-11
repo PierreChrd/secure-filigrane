@@ -1,10 +1,18 @@
 # 🔒 PDF / Image — Filigrane Inaltérable (Single‑file)
 
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+![Single-file](https://img.shields.io/badge/Single--File-Offline%20App-blue)
+![Filigrane](https://img.shields.io/badge/Filigrane-Inaltérable-red)
+[![Licence GPLv3](https://img.shields.io/badge/Licence-GNU%20GPLv3-blue)](LICENSE)
+
 Outil **100 % côté client** (HTML + JavaScript) permettant d’ajouter un **filigrane inaltérable** sur des **PDF** et des **images (PNG / JPEG)**, avec aperçu en temps réel.  
 Aucune donnée n’est envoyée sur un serveur.
 
 ---
+
 ![Aperçu de l’outil](démo.png)
+
 ---
 
 ## ✨ Fonctionnalités
