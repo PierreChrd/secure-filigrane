@@ -98,7 +98,6 @@ Aucune installation nécessaire.
 
 ## 📄 Licence
 Licence libre, sans aucune garantie : GNU General Public License v3.0
-À adapter selon les contraintes légales ou organisationnelles.
 
 ## ✍️ Auteur
 Outil conçu pour un usage professionnel de protection et de traçabilité documentaire.
